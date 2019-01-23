@@ -1,0 +1,12 @@
+#!/bin/bash
+
+i=1
+if [ "$#" -lt 1 ]; then
+	echo "Usage: $0 <Number Of Loops>"
+	exit 1
+fi
+while [ $i -lt $1 ]
+do
+	ls -tm | awk -F ',' '{print $1}'
+	i=$(($i+1))
+done

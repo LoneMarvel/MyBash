@@ -1,0 +1,13 @@
+#!/bin/bash
+
+i=0
+declare -a Files=(`ls -t`)
+echo "My Array Is --> "${Files[@]}
+echo "Explicity Array Display --> "${Files[@]:0:3}
+arrayLen=${#Files[@]}
+echo "The Length OF Array Is --> "$arrayLen
+while [ $i != $1 ]
+do
+	echo "Elements --> "${Files[$i]}
+	i=$(($i+1))
+done
