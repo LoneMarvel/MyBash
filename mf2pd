@@ -1,0 +1,8 @@
+for i in $(ls -d */) do  
+	cd $i
+	wDir=$(pwd)
+	for j in $(ls -d */) do 
+		mv $j/* $wDir
+	done
+	cd ..
+done
