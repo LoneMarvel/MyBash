@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo -n "Just type a number --> "
+read var
+echo "The Variable That You Type Is --> $var"

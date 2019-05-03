@@ -1,0 +1,23 @@
+#!/bin/bash
+
+args=("$#")
+i=0
+######################################
+#
+# This is a first way to show arguments
+#
+#####################################
+echo "This Is First way"
+echo $@
+#####################################
+#
+# This is the second way to display arguments
+#
+#####################################
+echo "This Is the second way"
+while [ $i -lt $args ] 
+do
+	echo "$i Argument --> "$1
+	shift
+	i=$(($i+1))
+done
