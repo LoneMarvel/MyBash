@@ -1,7 +1,6 @@
 #!/usr/bin/bash
 
 isRoot=$(whoami)
-declare -a devList
 if [ $isRoot != 'root' ];then
   echo 'You Must Be root Or Use sudo to run '$0
   exit 1
