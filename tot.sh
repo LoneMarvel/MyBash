@@ -11,7 +11,13 @@
 if [ "$#" -lt 1 ]; then
 	dirOpen=$(pwd)
 else
-	dirOpen=$1
+	if [ ! -d $1 ]; then
+		echo 'It Is Not A Directory'
+		exit 1
+	else
+		dirOpen=$1
+	fi
 fi
 
-ls -psSl | grep -v '\$' | awk 'BEGIN {$6}{sum+=$6} END {print "Total Files Size -> "sum}'
+
+ls -psSl $dirOpen | grep -v '\$' | awk 'BEGIN {$6}{sum+=$6} END {print "Total Files Size -> "sum}'
